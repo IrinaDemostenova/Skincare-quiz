@@ -1,0 +1,22 @@
+circle {
+    stroke-width: 6px;
+    fill: transparent;
+}
+
+#inner-circle {
+    stroke: rgba(238, 247, 251, 1);
+}
+
+#outer-circle {
+    stroke: rgba(170, 221, 243, 1);
+    transform: rotate(-90deg);
+    transform-origin: center;
+}
+
+text {
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24.36px;
+    fill: rgba(28, 38, 53, 1);
+}

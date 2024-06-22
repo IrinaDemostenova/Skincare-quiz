@@ -5,9 +5,10 @@
     justify-content: center;
     height: 100vh;
     gap: 20px;
+    position: relative;
 }
 
-span {
+#question-title {
     /* the font is not working */
     font-family: Grange;
     font-size: 40px;
@@ -15,15 +16,19 @@ span {
     line-height: 44px;
     text-align: center;
     color: rgba(28, 38, 53, 1);
-    width: 40%;
+    width: 30%;
 }
 
 #answers {
     display: flex;
     gap: 10px;
+    width: 65%;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 #answers button {
+    /* the font is not working */
     font-family: Proxima Nova;
     font-size: 16px;
     font-weight: 400;
@@ -36,23 +41,23 @@ span {
     border-radius: 10px;
     padding: 10px 20px;
     box-sizing: border-box;
-    /* not  sure - change it */
-    width: 129px;
+    min-width: 180px;
 }
 
 #buttons {
     display: flex;
-    gap: 10px;
+    gap: 15px;
 }
 
 #buttons a {
+    /* the font is not working */
     font-family: Proxima Nova;
     font-size: 16px;
     font-weight: 500;
     line-height: 19.49px;
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 13px;
+    padding-bottom: 13px;
 }
 
 #back {
@@ -64,8 +69,18 @@ span {
     background: rgba(195, 237, 255, 1);
     color: rgba(28, 38, 53, 1);
     border-radius: 10px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+#circular-bar {
+    position: absolute;
+    top: 35vh;
+    right: 13vw;
 }
 
 /* да се направят ефекти на бутоните */
