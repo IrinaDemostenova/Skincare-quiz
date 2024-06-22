@@ -6,7 +6,7 @@ const Quiz = () => {
     let { questionNumber } = useParams();
     questionNumber = Number(questionNumber);
 
-    return <Question question={questions[questionNumber - 1]} questionNumber={questionNumber} totalNumberOfQuestions={questions.length}/>
+    return <Question question={questions[questionNumber - 1]} questionNumber={questionNumber} totalNumberOfQuestions={questions.length} />
 }
 
 export default Quiz;

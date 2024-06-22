@@ -1,3 +1,5 @@
+/* font is not working anywhere - to fix it */
+
 #question {
     display: flex;
     flex-direction: column;
@@ -5,11 +7,17 @@
     justify-content: center;
     height: 100vh;
     gap: 20px;
-    position: relative;
+}
+
+#title-circle-content {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15vw;
+    margin-right: 27vw;
 }
 
 #question-title {
-    /* the font is not working */
     font-family: Grange;
     font-size: 40px;
     font-weight: 500;
@@ -28,7 +36,6 @@
 }
 
 #answers button {
-    /* the font is not working */
     font-family: Proxima Nova;
     font-size: 16px;
     font-weight: 400;
@@ -44,13 +51,22 @@
     min-width: 180px;
 }
 
+#answers button:hover {
+    background: rgba(91, 193, 237, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+#answers button.selected {
+    background: rgba(91, 193, 237, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
 #buttons {
     display: flex;
     gap: 15px;
 }
 
 #buttons a {
-    /* the font is not working */
     font-family: Proxima Nova;
     font-size: 16px;
     font-weight: 500;
@@ -62,6 +78,10 @@
 
 #back {
     color: rgba(103, 116, 135, 1);
+}
+
+#back:hover {
+    color: rgba(28, 38, 53, 1);
 }
 
 #next {
@@ -77,10 +97,6 @@
     gap: 5px;
 }
 
-#circular-bar {
-    position: absolute;
-    top: 35vh;
-    right: 13vw;
+#next:hover {
+    background: rgba(170, 221, 243, 1);
 }
-
-/* да се направят ефекти на бутоните */
