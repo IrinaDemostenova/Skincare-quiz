@@ -1,16 +1,33 @@
 import PropTypes from 'prop-types';
 import './ProductCard.css'
-import favorite from "..//../Images/favorite.svg";
-// import favorite from "..//../Images/full-heart.svg";
+import { useState } from 'react';
+import emptyHeart from "..//../Images/favorite.svg";
+import fullHeart from "..//../Images/full-heart.svg";
 
 const ProductCard = ({ product }) => {
+    const [isInWishlist, setIsInWishlist] = useState(JSON.parse(localStorage.getItem('inWishlist')) ? JSON.parse(localStorage.getItem('inWishlist')).includes(product.id) : false);
+
+    const toggleHeart = () => {
+        setIsInWishlist(prev => !prev);
+
+        const wishlist = JSON.parse(localStorage.getItem('inWishlist')) || [];
+        const index = wishlist.indexOf(product.id);
+
+        if (index === -1) {
+            wishlist.push(product.id);
+        } else {
+            wishlist.splice(index, 1);
+        }
+
+        localStorage.setItem('inWishlist', JSON.stringify(wishlist));
+    }
 
     return (
         <div id='product'>
             <img id='product-img' src={product.images[0].src} alt={product.title} />
             <h3>{product.title}</h3>
             <span>${product.variants[0].price}</span>
-            <img id='favorite' src={favorite} alt="favorite" />
+            <img id='heart' src={isInWishlist ? fullHeart : emptyHeart} alt="heart" onClick={toggleHeart} />
         </div>
     )
 }

@@ -10,10 +10,22 @@ const ResultsPage = () => {
     const { selectedAnswers, setContext } = useContext(AppContext);
     const [products, setProducts] = useState(null);
 
-    console.log(selectedAnswers);
-
     useEffect(() => {
-        getRecommendedProducts(selectedAnswers).then(setProducts);
+        getRecommendedProducts(selectedAnswers).then(result => {
+            const wishlist = JSON.parse(localStorage.getItem('inWishlist')) || [];
+            const inWishlist = [];
+            const notInWishlist = [];
+
+            result.forEach(product => {
+                if (wishlist.includes(product.id)) {
+                    inWishlist.push(product);
+                } else {
+                    notInWishlist.push(product);
+                }
+            })
+
+            setProducts([...inWishlist, ...notInWishlist]);
+        });
     }, [selectedAnswers]);
 
     return (

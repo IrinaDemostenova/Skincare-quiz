@@ -14,15 +14,20 @@ const Slider = ({ products }) => {
         setNumberOfPages(Math.ceil(products.length / 3))
     }, [page, products])
 
-    const changePage = () => {
-        setPage(prev => prev + 1);
+    const changePage = (direction) => {
+        if (direction === 'previous') {
+            setPage(prev => prev - 1);
+        } else if (direction === 'next') {
+            setPage(prev => prev + 1);
+        }
     }
 
     return (
         <>
             <div id="slider">
+                <img id="previous-arrow" className={page === 1 ? 'hidden' : ''} src={next} alt="previous" onClick={() => changePage('previous')} />
                 {currentProducts?.map(product => <ProductCard key={product.id} product={product} />)}
-                <img id="next-arrow" src={next} alt="next" onClick={changePage} />
+                <img id="next-arrow" className={page === numberOfPages ? 'hidden' : ''} src={next} alt="next" onClick={() => changePage('next')} />
             </div>
             <div className="pagination">
                 {Array.from({ length: numberOfPages }, (_, index) => (
