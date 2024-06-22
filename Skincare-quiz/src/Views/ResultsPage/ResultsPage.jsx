@@ -33,7 +33,7 @@ const ResultsPage = () => {
             <div id="header">
                 <img src={background} alt="background" />
                 <div id="header-text">
-                    <h1>Build you everyday self care routine.</h1>
+                    <h1>Build your everyday self care routine.</h1>
                     <p>Perfect for if you&apos;re looking for soft, nourished skin, our moisturizing body washes are made with skin-natural nutrients that work with your skin to replenish moisture. With a light formula, the bubbly lather leaves your skin feeling cleansed and cared for. And by choosing relaxing fragrances you can add a moment of calm to the end of your day.</p>
                     <NavLink to={'/quiz/1'} onClick={() => setContext({ selectedAnswers: null })}>Retake the quiz</NavLink>
                 </div>

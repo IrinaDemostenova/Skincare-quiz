@@ -14,9 +14,9 @@
 }
 
 #daily-routine h3 {
-    font-family: Grange;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
     font-size: 24px;
-    font-weight: 600;
+    font-weight: normal;
     line-height: 26.4px;
     text-align: center;
     color: rgba(28, 38, 53, 1);
@@ -26,13 +26,13 @@
 }
 
 #daily-routine p {
-    font-family: Proxima Nova;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 24px;
     text-align: left;
     color: rgba(28, 38, 53, 1);
-    width: 70.5%;
+    width: 86.5%;
     margin: 0;
 }
 

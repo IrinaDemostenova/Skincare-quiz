@@ -14,9 +14,8 @@ circle {
 }
 
 text {
-    font-family: 'Proxima Nova', sans-serif;
-    font-size: 20px;
-    font-weight: 300;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: normal;
     line-height: 24.36px;
     fill: rgba(28, 38, 53, 1);
 }
