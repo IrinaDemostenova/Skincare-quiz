@@ -3,14 +3,19 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import StartPage from "./Views/StartPage/StartPage";
 import Quiz from './Views/Quiz/Quiz';
 import ResultsPage from './Views/ResultsPage/ResultsPage';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import AppContext from './context/AppContext';
 import { Toaster } from 'react-hot-toast';
 
 const App = () => {
-  const [context, setContext] = useState({
+  const storedContext = JSON.parse(localStorage.getItem('appContext'));
+  const [context, setContext] = useState(storedContext || {
     selectedAnswers: null,
   });
+
+  useEffect(() => {
+    localStorage.setItem('appContext', JSON.stringify(context));
+  }, [context]);
 
   return <>
     <AppContext.Provider value={{ ...context, setContext }}>

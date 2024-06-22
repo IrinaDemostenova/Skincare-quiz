@@ -1,0 +1,34 @@
+#slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    gap: 4.5vw;
+    margin-top: -10px;
+    margin-left: 8.2vw;
+}
+
+#next-arrow {
+    cursor: pointer;
+}
+
+#next-arrow:hover {
+    transform: scale(1.1);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 110px;
+    margin-bottom: 50px;
+}
+
+.dot {
+    color: rgba(227, 227, 227, 1);
+}
+
+.dot.active {
+    color: rgba(91, 193, 237, 1);
+}
