@@ -5,6 +5,7 @@ import Quiz from './Views/Quiz/Quiz';
 import ResultsPage from './Views/ResultsPage/ResultsPage';
 import { useState } from 'react';
 import AppContext from './context/AppContext';
+import { Toaster } from 'react-hot-toast';
 
 const App = () => {
   const [context, setContext] = useState({
@@ -13,6 +14,7 @@ const App = () => {
 
   return <>
     <AppContext.Provider value={{ ...context, setContext }}>
+      <Toaster />
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<StartPage />} />

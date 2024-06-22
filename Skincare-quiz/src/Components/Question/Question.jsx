@@ -5,6 +5,7 @@ import arrow from "..//../Images/arrow.svg";
 import CircularProgressBar from '../CircularProgressBar/CircularProgressBar';
 import { useContext, useEffect, useState } from 'react';
 import AppContext from '../../context/AppContext';
+import toast from 'react-hot-toast';
 
 const Question = ({ question, questionNumber, totalNumberOfQuestions }) => {
     const { selectedAnswers, setContext } = useContext(AppContext);
@@ -12,21 +13,26 @@ const Question = ({ question, questionNumber, totalNumberOfQuestions }) => {
 
     useEffect(() => {
         if (selectedAnswers) {
-            setSelectedAnswer(selectedAnswers[questionNumber])
+            setSelectedAnswer(selectedAnswers[questionNumber-1])
         }
     }, [selectedAnswers, questionNumber])
 
     useEffect(() => {
-        const newAnswers = {
-            ...selectedAnswers,
-            [questionNumber]: selectedAnswer,
-        }
+        const newAnswers = selectedAnswers ? [...selectedAnswers] : [];
+        newAnswers[questionNumber-1] = selectedAnswer;
 
         setContext({ selectedAnswers: newAnswers });
     }, [selectedAnswer]);
 
     const selectAnswer = (answer) => {
         setSelectedAnswer(answer);
+    }
+
+    const checkAnswer = (e) => {
+        if (!selectedAnswer) {
+            e.preventDefault();
+            toast.error('Please select an answer before moving on');
+        }
     }
 
     return (<div id='question'>
@@ -43,7 +49,7 @@ const Question = ({ question, questionNumber, totalNumberOfQuestions }) => {
         </div>
         <div id='buttons'>
             <NavLink id='back' to={questionNumber === 1 ? '/' : `/quiz/${questionNumber - 1}`}>Back</NavLink>
-            <NavLink id='next' to={questionNumber === totalNumberOfQuestions ? '/results' : `/quiz/${questionNumber + 1}`}>
+            <NavLink id='next' to={questionNumber === totalNumberOfQuestions ? '/results' : `/quiz/${questionNumber + 1}`} onClick={checkAnswer}>
                 <span>{questionNumber === totalNumberOfQuestions ? 'Discover Your Results' : `Next Question`}</span>
                 {questionNumber !== totalNumberOfQuestions && <img src={arrow} alt='arrow' />}
             </NavLink>
