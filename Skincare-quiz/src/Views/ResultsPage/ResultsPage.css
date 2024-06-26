@@ -56,28 +56,28 @@
 
 @media (max-width: 768px) {
     #header img {
-        top: 0; /* Adjust the position of the background image for smaller screens */
+        top: 0;
     }
 
     #header-text {
-        width: 80%; /* Increase the width for smaller screens for better readability */
-        height: auto; /* Make the height auto to accommodate the content size */
-        padding: 20px 0; /* Add some padding for spacing */
+        width: 80%;
+        height: auto; 
+        padding: 20px 0;
     }
 
     #header h1 {
-        font-size: 24px; /* Decrease the font size for smaller screens */
-        margin-top: 20px; /* Adjust the top margin to reduce space */
+        font-size: 24px;
+        margin-top: 20px;
     }
 
     #header p {
-        font-size: 16px; /* Adjust the font size for readability on smaller screens */
-        margin-bottom: 20px; /* Adjust the bottom margin for spacing */
+        font-size: 16px;
+        margin-bottom: 20px;
     }
 
     #header a {
-        width: 60%; /* Increase the width of buttons/links for easier interaction */
-        padding: 15px; /* Increase padding for a larger clickable area */
-        font-size: 18px; /* Increase the font size for better readability */
+        width: 60%;
+        padding: 15px;
+        font-size: 18px;
     }
 }
