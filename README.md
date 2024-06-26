@@ -36,4 +36,4 @@ The project is organized as follows to ensure easy navigation and maintenance:
 2. Open the terminal and navigate to the folder where the `package.json` file is located.
 3. Run the command `npm i` or `npm install` to install the project dependencies.
 4. After the dependencies are installed, run the command `npm run dev` to start the project.
-5. Finally, open a web browser and navigate to `http://localhost:3000`, or alternatively, press Ctrl and click the link in the terminal to open it.
+5. Finally press Ctrl and click the link in the terminal to open it.
