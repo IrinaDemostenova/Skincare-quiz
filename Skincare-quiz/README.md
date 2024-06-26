@@ -1,5 +1,5 @@
 # Front-end Task - Skincare Quiz
-The project is hosted live [here](https://example.com). Feel free to visit and explore the Hair Care Routine Finder SPA.
+The project is hosted live [here](https://skincare-quiz-fbp0ppg4a-irinademostenovas-projects.vercel.app/). Feel free to visit and explore the Hair Care Routine Finder SPA.
 
 ## Hair Care Routine Finder SPA
 
