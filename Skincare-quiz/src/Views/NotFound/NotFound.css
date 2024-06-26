@@ -1,0 +1,27 @@
+#not-found {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+#not-found a {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    background-color: #194260;
+    padding: 0.7vw 1vw;
+    font-size: 1.7vw; 
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+#not-found a:hover {
+    background-color: #0c2c4e;
+}
+
+#not-found img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

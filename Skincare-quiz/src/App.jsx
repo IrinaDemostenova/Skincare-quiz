@@ -6,6 +6,7 @@ import ResultsPage from './Views/ResultsPage/ResultsPage';
 import { useEffect, useState } from 'react';
 import AppContext from './context/AppContext';
 import { Toaster } from 'react-hot-toast';
+import NotFound from './Views/NotFound/NotFound';
 
 const App = () => {
   const storedContext = JSON.parse(localStorage.getItem('appContext'));
@@ -25,6 +26,7 @@ const App = () => {
           <Route path='/' element={<StartPage />} />
           <Route path='/quiz/:questionNumber' element={<Quiz />} />
           <Route path='/results' element={<ResultsPage />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </AppContext.Provider>

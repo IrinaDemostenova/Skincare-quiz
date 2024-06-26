@@ -16,9 +16,8 @@
 }
 
 #question-title {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 40px;
-    font-weight: normal;
     line-height: 44px;
     text-align: center;
     color: rgba(28, 38, 53, 1);
@@ -36,7 +35,6 @@
 #answers button {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 16px;
-    font-weight: normal;
     line-height: 16px;
     text-align: left;
     color: rgba(28, 38, 53, 1);
@@ -45,7 +43,6 @@
     background: rgba(255, 255, 255, 1);
     border-radius: 10px;
     padding: 10px 20px;
-    box-sizing: border-box;
     min-width: 180px;
 }
 
@@ -66,10 +63,6 @@
 
 #buttons a {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 19.49px;
-    text-align: center;
     padding-top: 13px;
     padding-bottom: 13px;
 }
@@ -97,4 +90,19 @@
 
 #next:hover {
     background: rgba(170, 221, 243, 1);
+}
+
+@media (max-width: 768px) {
+    #title-circle-content {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 5vw;
+        margin-right: 0;
+        margin-bottom: 5vw;
+    }
+
+    #question-title {
+        width: 70%;
+    }
 }

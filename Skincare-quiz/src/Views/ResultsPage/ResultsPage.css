@@ -28,7 +28,6 @@
     font-size: 40px;
     font-weight: normal;
     line-height: 44px;
-    text-align: center;
     margin: 0;
     margin-top: 10vh;
     width: 60%;
@@ -36,19 +35,12 @@
 
 #header p {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 16px;
-    font-weight: normal;
     line-height: 24px;
-    text-align: center;
     margin-bottom: 5vh;
 }
 
 #header a {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 19.49px;
-    text-align: center;
     text-decoration: none;
     border: 1px solid rgba(255, 255, 255, 1);
     color: rgba(255, 255, 255, 1);
@@ -60,4 +52,32 @@
 #header a:hover {
     background-color: rgba(255, 255, 255, 1);
     color: rgba(28, 38, 53, 1);
+}
+
+@media (max-width: 768px) {
+    #header img {
+        top: 0; /* Adjust the position of the background image for smaller screens */
+    }
+
+    #header-text {
+        width: 80%; /* Increase the width for smaller screens for better readability */
+        height: auto; /* Make the height auto to accommodate the content size */
+        padding: 20px 0; /* Add some padding for spacing */
+    }
+
+    #header h1 {
+        font-size: 24px; /* Decrease the font size for smaller screens */
+        margin-top: 20px; /* Adjust the top margin to reduce space */
+    }
+
+    #header p {
+        font-size: 16px; /* Adjust the font size for readability on smaller screens */
+        margin-bottom: 20px; /* Adjust the bottom margin for spacing */
+    }
+
+    #header a {
+        width: 60%; /* Increase the width of buttons/links for easier interaction */
+        padding: 15px; /* Increase padding for a larger clickable area */
+        font-size: 18px; /* Increase the font size for better readability */
+    }
 }

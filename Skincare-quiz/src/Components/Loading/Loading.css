@@ -4,10 +4,15 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    font-size: 30px;
+    font-size: 3.5vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: relative;
     color: rgba(255, 255, 255, 1);
+    text-align: center;
+}
+
+#loading p {
+    width: 60vw;
 }
 
 #loading img {

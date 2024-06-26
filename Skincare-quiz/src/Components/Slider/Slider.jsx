@@ -32,11 +32,13 @@ const Slider = ({ products }) => {
         <>
             <div id="slider">
                 <img id="previous-arrow" className={page === 1 ? 'hidden' : ''} src={next} alt="previous" onClick={() => changePage('previous')} />
+                <div id="slider-products-container">
                 {page === 1 && <div id="daily-routine">
                     <h3>Daily routine</h3>
                     <p>Perfect for if you&apos;re looking for soft, nourished skin, our moisturizing body washes are made with skin-natural nutrients that work with your skin to replenish moisture. With a light formula, the bubbly lather leaves your skin feeling cleansed and cared for. And by choosing relaxing fragrances you can add a moment of calm to the end of your day.</p>
                 </div>}
                 {currentProducts?.map(product => <ProductCard key={product.id} product={product} />)}
+                </div>
                 <img id="next-arrow" className={page === numberOfPages ? 'hidden' : ''} src={next} alt="next" onClick={() => changePage('next')} />
             </div>
             <div className="pagination">
