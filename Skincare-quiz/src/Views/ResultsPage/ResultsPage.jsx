@@ -7,6 +7,11 @@ import background from "..//../Images/results-page-pic.png";
 import './ResultsPage.css'
 import Loading from "../../Components/Loading/Loading";
 
+/**
+ * Renders the ResultsPage component.
+ * 
+ * @returns {JSX.Element} The rendered ResultsPage component.
+ */
 const ResultsPage = () => {
     const { selectedAnswers, setContext } = useContext(AppContext);
     const [products, setProducts] = useState(null);
@@ -27,7 +32,7 @@ const ResultsPage = () => {
 
             setProducts([...inWishlist, ...notInWishlist]);
         });
-    }, [selectedAnswers]);
+    }, []);
 
     return (
         <>

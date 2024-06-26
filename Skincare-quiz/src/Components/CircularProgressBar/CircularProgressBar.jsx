@@ -1,6 +1,16 @@
 import PropTypes from 'prop-types';
 import './CircularProgressBar.css';
 
+/**
+ * CircularProgressBar component displays a circular progress bar with a given progress value.
+ *
+ * @component
+ * @param {Object} props - The component props.
+ * @param {number} props.progress - The progress value to be displayed on the progress bar.
+ * @param {string} props.id - The unique identifier for the SVG element.
+ * @param {string} props.progressText - The text to be displayed at the center of the progress bar.
+ * @returns {JSX.Element} - The rendered CircularProgressBar component.
+ */
 const CircularProgressBar = ({ progress, id, progressText }) => {
     const radius = 40;
     const circumference = 2 * Math.PI * radius;

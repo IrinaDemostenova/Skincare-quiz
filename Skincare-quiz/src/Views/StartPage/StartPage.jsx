@@ -4,6 +4,10 @@ import AppContext from '../../context/AppContext';
 import { useContext, useEffect } from 'react';
 import pic from "..//../Images/start-page-pic.png";
 
+/**
+ * Represents the start page of the skincare quiz.
+ * @component
+ */
 const StartPage = () => {
     const { setContext } = useContext(AppContext);
 

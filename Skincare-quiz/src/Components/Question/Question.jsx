@@ -7,6 +7,16 @@ import { useContext, useEffect, useState } from 'react';
 import AppContext from '../../context/AppContext';
 import toast from 'react-hot-toast';
 
+/**
+ * Renders a question component.
+ *
+ * @component
+ * @param {Object} props - The component props.
+ * @param {Object} props.question - The question object containing the title and answers.
+ * @param {number} props.questionNumber - The current question number.
+ * @param {number} props.totalNumberOfQuestions - The total number of questions.
+ * @returns {JSX.Element} The rendered Question component.
+ */
 const Question = ({ question, questionNumber, totalNumberOfQuestions }) => {
     const { selectedAnswers, setContext } = useContext(AppContext);
     const [selectedAnswer, setSelectedAnswer] = useState(null);

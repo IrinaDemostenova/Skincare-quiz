@@ -5,6 +5,13 @@ import './Slider.css';
 import next from "..//../Images/next.svg";
 
 
+/**
+ * Slider component displays a slider with products and pagination.
+ *
+ * @component
+ * @param {Object[]} products - The array of products to be displayed in the slider.
+ * @returns {JSX.Element} The rendered Slider component.
+ */
 const Slider = ({ products }) => {
     const [currentProducts, setCurrentProducts] = useState(null);
     const [page, setPage] = useState(1);

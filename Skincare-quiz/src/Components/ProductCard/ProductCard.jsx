@@ -4,6 +4,14 @@ import { useState } from 'react';
 import emptyHeart from "..//../Images/favorite.svg";
 import fullHeart from "..//../Images/full-heart.svg";
 
+/**
+ * Renders a product card component.
+ *
+ * @component
+ * @param {Object} props - The component props.
+ * @param {Object} props.product - The product object containing information about the product.
+ * @returns {JSX.Element} The rendered product card component.
+ */
 const ProductCard = ({ product }) => {
     const [isInWishlist, setIsInWishlist] = useState(JSON.parse(localStorage.getItem('inWishlist')) ? JSON.parse(localStorage.getItem('inWishlist')).includes(product.id) : false);
 

@@ -8,6 +8,12 @@ import AppContext from './context/AppContext';
 import { Toaster } from 'react-hot-toast';
 import NotFound from './Views/NotFound/NotFound';
 
+/**
+ * The main component of the application.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered App component.
+ */
 const App = () => {
   const storedContext = JSON.parse(localStorage.getItem('appContext'));
   const [context, setContext] = useState(storedContext || {
